@@ -1,0 +1,17 @@
+enum Priority {
+  LOW
+  NORMAL
+  HIGH
+}
+
+type StockData @model
+@auth(rules: [{ allow: public}]) {
+  id: ID!
+  name: String!
+  symbol: String!
+  sector: String!
+  dailyCount: Int!
+  weeklyCount: Int!
+  monthlyCount: Int!
+  yearlyCount: Int!
+}
